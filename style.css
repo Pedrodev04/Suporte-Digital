@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'poppins';
+}
+/* inicio */
+section{
+    width: 100%;
+    height:100px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section:nth-of-type(1){
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,20)), url(imagens/pexels-yankrukov-4458423.jpg);
+    height: 700px;
+}
+section:nth-of-type(3){
+    background-image:linear-gradient(to left,rgba(0,0,0,0),rgba(0,0,0,20)), url(imagens/pexels-jep-gambardella-7690086.jpg);
+    height: 700px;
+}
+section:nth-of-type(5){
+    background-image:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,20)), url(imagens/pexels-karolina-grabowska-6214832.jpg);
+    height: 800px;
+}
+.interface{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.apresentacao{
+    margin-top: 5%;
+    width: 50%;
+    text-align: center;
+}
+.apresentacao h1{
+    color: white;
+    font-size: 45px;
+}
+.apresentacao h3{
+    font-size: 30px;
+    color: white;
+}
+.apresentacao a{
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px 40px;
+    cursor: pointer;
+    transition: .2s;
+    background-color: green;
+    font-weight: 600;
+    font-size: 35px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 2px 2px 20px green;
+}
+.apresentacao a:hover{
+    transform: scale(1.05);
+    
+}
+/* hard skils*/
+.hard-skils{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    height: 100vh;
+}
+.hard-skils .txt-skils{
+    color: white;
+    text-align: center;
+    margin: 40px;
+    width: 50%;
+}
+.txt-skils h1{
+    font-size: 30px;
+    color: gray;
+}
+.txt-skils span{
+    color: white;
+}
+.txt-skils p{
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+.hard-skils .skils h1{
+    text-align: center;
+    color: white;
+    width: 50%;
+}
+.skils span{
+    color: gray;
+}
+.hard-skils .skils ul{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+.hard-skils .skils ul li{
+    width: 50%;
+    list-style-type: none;
+    margin: 10px;
+}
+.skils a{
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: .2s;
+    background-color: green;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 2px 2px 20px green;
+    margin-left: 320px;
+}
+.skils a:hover{
+    transform: scale(1.05);
+    
+}
+/* formulario */
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+}
+.formulario h1{
+    font-size: 25px;
+    color: white;
+    width: 30%;
+    text-align: center;
+}
+.formulario h1 i{
+    font-size: 40px;
+    margin: 20px;
+    color: white;
+    transition: .2s;
+    display: inline-block;
+    font-weight: 400;
+    cursor: pointer;
+}
+.formulario h1 i:hover{
+    transform: scale(1.05);
+    color: black;
+}
+
+form{
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 2px 2px 20px black;
+
+}
+form input, form textarea{
+    border: 0;
+    outline: 0;
+    padding: 15px 15px;
+    color: black;
+    border-radius: 25px;
+    font-size: 18px;
+}
+form textarea{
+    resize: none;
+    max-height: 100px;
+}
+form .btn-enviar{
+    margin-top: 10px;
+    text-align: center;
+    padding-right: 20px;
+}
+    
+form .btn-enviar input{
+    width: 120px;
+    background-color: gray;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 2px 2px 20px gray;
+}
+form .btn-enviar input:hover{
+    transform: scale(1.05);
+}
+/* responsivo */
+@media screen and (max-width: 1200px){
+    section{
+        background-attachment: scroll;
+        height: 20px;
+    }
+    .apresentacao{
+        width: 100%;
+        margin-left: 10px;
+        margin-top: 30%;
+        
+    }
+    .apresentacao h1{
+        font-size: 30px;
+        color: white;
+    }
+    .apresentacao h3{
+        font-size: 20px;
+        color: white;
+    }
+    .apresentacao a{
+        padding: 10px 20px;
+    }
+    /* skils */
+    .hard-skils .txt-skils{
+        text-align: left;
+        margin:10px;
+        width: 90%; 
+    }
+    .txt-skils p{
+        font-size: 15px;
+        width: 80%;
+        text-align: left;
+    }
+    .txt-skils h1{
+        margin-top: 40px;
+    }
+    .hard-skils .skils h1{
+        text-align: left;
+        width: 100%;
+        font-size: 25px;
+        margin-top: 5%;
+    }
+    .hard-skils .skils ul{
+        text-align: left;
+        margin: none;
+    }
+    .hard-skils .skils ul li{
+        width: 90%;
+        font-size: 15px;
+    }
+    .skils a{
+        margin-left: 90px;
+    }
+    /* formulario */
+    .formulario{
+        flex-direction: column-reverse;
+    }
+    .formulario h1{
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+    }
+    form{
+        padding: 5px;
+    }
+    form input, form textarea{
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        border: 1px solid white;
+        padding: 10px 10px;
+    }
+    form input::placeholder{
+        color: white;
+    }
+    form textarea::placeholder{
+        color: white;
+    }
+    form .btn-enviar input{
+        background-color: transparent;
+        backdrop-filter: blur(5px);
+        color: white;
+    }
+}
