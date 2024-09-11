@@ -51,16 +51,27 @@ section:nth-of-type(5){
     text-align: center;
     padding: 20px 40px;
     cursor: pointer;
-    transition: .2s;
     background-color: green;
     font-weight: 600;
     font-size: 35px;
     text-decoration: none;
     display: inline-block;
     box-shadow: 2px 2px 20px green;
+    animation: zoom 5s infinite;
+    transition: transform 0.3s ease-in-out;
 }
-.apresentacao a:hover{
-    transform: scale(1.05);
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 2px 2px 20px white;
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 2px 2px 20px black;
+      }
     
 }
 /* hard skils*/
@@ -114,7 +125,6 @@ section:nth-of-type(5){
     text-align: center;
     padding: 10px 20px;
     cursor: pointer;
-    transition: .2s;
     background-color: green;
     font-weight: 600;
     font-size: 20px;
@@ -122,9 +132,21 @@ section:nth-of-type(5){
     display: inline-block;
     box-shadow: 2px 2px 20px green;
     margin-left: 320px;
+    animation: zoom 5s infinite; /* 5 segundos de duração, repete infinitamente */
+    transition: transform 0.3s ease-in-out; /* Suave transição */
 }
-.skils a:hover{
-    transform: scale(1.05);
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 2px 2px 20px white;
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 2px 2px 20px black;
+      }
     
 }
 /* formulario */
