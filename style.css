@@ -5,58 +5,73 @@
 }
 body{
     font-family: 'poppins';
+    background-color: rgba(0,0,0,20);
+    color: white;
+}
+/* Classes gerais */
+h1{
+    font-size: 2.25rem;
+    font-family: 'Roboto Slab', serif;
+    color: gray;
+}
+h3{
+    font-size: 2.25rem; 
 }
 /* inicio */
 section{
     width: 100%;
     height:100px;
     background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    background-attachment: fixed;
+    background-position: right;
+    background-size:70%;
+}
+section:nth-of-type(2){
+    height: 460px;
 }
 section:nth-of-type(1){
-    background-image: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,20)), url(imagens/pexels-yankrukov-4458423.jpg);
+    background-image: linear-gradient(to left, rgba(0,0,0,0),rgba(0,0,0,20)), url(imagens/pexels-yankrukov-4458423.jpg);
     height: 700px;
 }
 section:nth-of-type(3){
     background-image:linear-gradient(to left,rgba(0,0,0,0),rgba(0,0,0,20)), url(imagens/pexels-jep-gambardella-7690086.jpg);
     height: 700px;
 }
-section:nth-of-type(5){
-    background-image:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,20)), url(imagens/pexels-karolina-grabowska-6214832.jpg);
-    height: 800px;
+section:nth-of-type(4){
+    height: 460px;
 }
+section:nth-of-type(5){
+    background-image:linear-gradient(to left,rgba(0,0,0,0),rgba(0,0,0,20)), url(imagens/pexels-karolina-grabowska-6214832.jpg);
+    height: 700px;
+}
+/* primeira pagina */
 .interface{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: 7%;
 }
 .apresentacao{
-    margin-top: 5%;
-    width: 50%;
-    text-align: center;
-}
-.apresentacao h1{
-    color: white;
-    font-size: 45px;
+    margin-top: 8%;
+    width: 40%;
+    text-align: left;
 }
 .apresentacao h3{
-    font-size: 30px;
     color: white;
+    padding-top: 20px; 
+}
+.apresentacao p{
+    padding-top: 20px; 
 }
 .apresentacao a{
+    margin-top: 40px;
     color: white;
-    border-radius: 20px;
+    border-radius: 5px;
     text-align: center;
-    padding: 20px 40px;
+    padding: 10px 60px;
     cursor: pointer;
-    background-color: green;
-    font-weight: 600;
-    font-size: 35px;
+    background-color: #1e88e57b;
+    font-size: 1.125rem;
     text-decoration: none;
     display: inline-block;
-    box-shadow: 2px 2px 20px green;
+    box-shadow: 2px 2px 0px gray;
     animation: zoom 5s infinite;
     transition: transform 0.3s ease-in-out;
 }
@@ -66,13 +81,65 @@ section:nth-of-type(5){
       }
       50% {
         transform: scale(1.1);
-        box-shadow: 2px 2px 20px white;
+        box-shadow: 2px 2px 0px white;
       }
       100% {
         transform: scale(1);
         box-shadow: 2px 2px 20px black;
       }
     
+}
+/* segunda pagina*/
+.sobre-nos{
+    display: flex;
+    padding-top: 10%;
+    justify-content: center;
+    align-items: center;
+}
+.inicio-sobre1{
+    width: 40%;
+}
+.inicio-sobre1 .missao{
+    margin-top: 10%;
+}
+.missao h2{
+    color: gray;
+}
+.quem-somos h1{
+    padding-bottom: 10px;    
+}
+.inicio-sobre2{
+    margin-left: 10%;
+}
+.inicio-sobre2 ol{
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;
+}
+ol .valores{
+    margin: 10px 0px;
+    color: #1E88E5;
+}
+.valores li{
+    list-style-type: none;
+    color: white;
+}
+.cta{
+    margin-top: 20%;
+    background-color: #1e88e5cd;
+    text-align: center;
+    width: 60%;
+    border-radius: 5px;
+    padding: 10px 10px;
+    box-shadow: 2px 2px 0px white;
+    transition: .2s;
+}
+.cta:hover{
+    transform: scale(1.05);
+}
+.cta a{
+    text-decoration: none;
+    color: white;
 }
 /* hard skils*/
 .hard-skils{
@@ -81,24 +148,26 @@ section:nth-of-type(5){
     align-items: left;
     flex-direction: column;
     height: 100vh;
+    text-align: left;
 }
 .hard-skils .txt-skils{
     color: white;
-    text-align: center;
-    margin: 40px;
-    width: 50%;
+    width: 30%;
+    padding-top: 40px;
+    margin-left: 7%;
 }
 .txt-skils h1{
-    font-size: 30px;
     color: gray;
+}
+.txt-skils p{
+    padding-top: 20px;
 }
 .txt-skils span{
     color: white;
 }
 .txt-skils p{
-    font-size: 25px;
+    font-size: 1rem;
     font-weight: 500;
-    text-align: center;
 }
 .hard-skils .skils h1{
     text-align: center;
@@ -111,72 +180,61 @@ section:nth-of-type(5){
 .hard-skils .skils ul{
     color: white;
     font-size: 20px;
-    text-align: center;
     font-weight: 600;
-}
-.hard-skils .skils ul li{
-    width: 50%;
-    list-style-type: none;
-    margin: 10px;
-}
-.skils a{
-    color: white;
-    border-radius: 20px;
-    text-align: center;
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: green;
-    font-weight: 600;
-    font-size: 20px;
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: 2px 2px 20px green;
-    margin-left: 320px;
-    animation: zoom 5s infinite; /* 5 segundos de duração, repete infinitamente */
-    transition: transform 0.3s ease-in-out; /* Suave transição */
-}
-@keyframes zoom {
-    0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-        box-shadow: 2px 2px 20px white;
-      }
-      100% {
-        transform: scale(1);
-        box-shadow: 2px 2px 20px black;
-      }
-    
-}
-/* formulario */
-.formulario{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    height: 100vh;
+    padding-top: 80px;
 }
-.formulario h1{
-    font-size: 25px;
-    color: white;
-    width: 30%;
+.hard-skils .skils ul li{
+    padding:60px 5px ;
+    list-style-type: none;
+    margin: 10px;
+    font-size: 1rem;
     text-align: center;
+    border: 2px solid gray;
+    border-radius: 8px;
+    background-color: rgba(128, 128, 128, 0.438);
+    box-shadow: 2px 2px 0px black;
 }
-.formulario h1 i{
-    font-size: 40px;
-    margin: 20px;
-    color: white;
-    transition: .2s;
-    display: inline-block;
-    font-weight: 400;
-    cursor: pointer;
+/* Serviços */
+.inicio-servicos{
+    margin-left: 8%;
 }
-.formulario h1 i:hover{
-    transform: scale(1.05);
-    color: black;
+.inicio-servicos h1{
+    padding-top: 30px;
 }
-
+.conteudo-servicos{
+    display: flex;
+    margin-top: 8%;
+}
+.conteudo-servicos p{
+    width: 70%;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #1e88e57b;
+    padding: 20px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px white;
+}
+.conteudo-servicos h4{
+    text-align: center;
+    width: 70%;
+}
+/* formulario */
+.conteudo-contatos{
+    display: flex;
+    padding-top: 10%;
+}
+.inicio-contatos{
+    margin-left: 20%;
+}
+.inicio-contatos p{
+   width: 80%;
+}
+.forms{
+    margin-right: 20%;
+}
 form{
     max-width: 400px;
     display: flex;
@@ -184,17 +242,16 @@ form{
     flex-direction: column;
     gap: 10px;
     padding: 50px;
-    border-radius: 20px;
+    border-radius: 5px;
     border: 2px solid white;
     box-shadow: 2px 2px 20px black;
-
 }
 form input, form textarea{
     border: 0;
     outline: 0;
     padding: 15px 15px;
     color: black;
-    border-radius: 25px;
+    border-radius: 5px;
     font-size: 18px;
 }
 form textarea{
@@ -209,27 +266,53 @@ form .btn-enviar{
     
 form .btn-enviar input{
     width: 120px;
-    background-color: gray;
-    color: black;
+    background-color: #1e88e57b;
+    color: white;
     font-weight: 700;
     cursor: pointer;
     transition: .2s;
-    box-shadow: 2px 2px 20px gray;
+    box-shadow: 2px 2px 0px gray;
 }
 form .btn-enviar input:hover{
     transform: scale(1.05);
 }
+/* footer */
+footer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+.links{
+    margin-top: 20px;
+}
+.links a{
+    display: inline-block;
+    margin: 0px 10px;
+    background-color:#1e88e57b;
+    padding: 5px 10px;
+    font-size: 2rem;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 2px 0px 2px 0px white;
+    transition: .2s;
+}
+.links a:hover{
+    transform: scale(1.05);
+    box-shadow: 2px 2px 0px white;
+}
+
 /* responsivo */
 @media screen and (max-width: 1200px){
     section{
-        background-attachment: scroll;
         height: 20px;
     }
     .apresentacao{
         width: 100%;
         margin-left: 10px;
-        margin-top: 30%;
-        
+        margin-top: 30%;  
     }
     .apresentacao h1{
         font-size: 30px;
